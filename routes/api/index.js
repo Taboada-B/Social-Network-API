@@ -1,8 +1,12 @@
 const router = require('express').Router();
-const courseRoutes = require('./courseRoutes'); // add endpoint
-const studentRoutes = require('./studentRoutes'); // add endpoint
+const users = require('./users'); 
+const thoughts = require('./thoughts'); 
+const reactions = require('./reactions'); 
 
-// router.use('/courses', courseRoutes);
-// router.use('/students', studentRoutes);
+// /api/
+router.use('/users', users);
+router.use('/thoughts', thoughts);
+router.use('/reactions', reactions);
+
 
 module.exports = router;
