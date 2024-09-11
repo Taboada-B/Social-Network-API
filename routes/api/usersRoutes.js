@@ -11,14 +11,14 @@ const {
 
 // /api/users
 router.route('/')
-  .get(getAllUsers)
-  .post(createUser);
+  .get(getAllUsers)  //works
+  .post(createUser);  //works
 
 // /api/users/:id
 router.route('/:id')
-  .get(getUserById)
-  .put(updateUser)
-  .delete(deleteUser);
+  .get(getUserById) //not working
+  .put(updateUser) // works
+  .delete(deleteUser); //works
 
 // /api/users/:userId/friends/:friendId
 router.route('/:userId/friends/:friendId')
