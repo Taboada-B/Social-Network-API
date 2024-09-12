@@ -12,13 +12,24 @@ const {
 // /api/thoughts
 router.route('/')
   .get(getAllThoughts)  // works
-  .post(createThought); //
+  .post(createThought); // works
+  // example body
+  //"thoughtText": "Hopefully this works",
+// "username": "john",
+// "userId": "66e25d2c9bae8781c6ca3ee9"
 
 // /api/thoughts/:id
 router.route('/:id')
-  .get(getThoughtById)
-  .put(updateThought)
-  .delete(deleteThought);
+  .get(getThoughtById) // works
+  .put(updateThought) // works 
+  .delete(deleteThought); // works
+
+//example body for put
+ // {
+// "thoughtText": "Hopefully this updates",
+// "username": "john",
+// 	"userId": "66e25d2c9bae8781c6ca3ee9"
+// }
 
 // /api/thoughts/:thoughtId/reactions
 router.route('/:thoughtId/reactions')
