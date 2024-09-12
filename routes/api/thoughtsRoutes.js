@@ -33,10 +33,15 @@ router.route('/:id')
 
 // /api/thoughts/:thoughtId/reactions
 router.route('/:thoughtId/reactions')
-  .post(addReaction);
+  .post(addReaction); // works
+// post body example
+// {
+//   "reactionBody": "I am a crazy man and this reaction must be deleted",
+//   "username": "John"
+//   }
 
 // /api/thoughts/:thoughtId/reactions/:reactionId
 router.route('/:thoughtId/reactions/:reactionId')
-  .delete(removeReaction);
+  .delete(removeReaction); //works
 
 module.exports = router;
