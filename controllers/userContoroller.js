@@ -16,9 +16,9 @@ const userController = {
     async getUserById(req, res) {
         try {
             const user = await User.findOne({ _id: req.params.id })
-                                   .populate('thoughts')
+                                //    .populate('thoughts')
                                    .populate('friends');
-
+            console.log('user: ', user)
             if (!user) {
                 console.log('user: ', user)
                 return res.status(404).json({ message: 'No user found with this ID!' });
